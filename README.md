@@ -43,15 +43,23 @@ root
 You can clone this git project, or download the zip file.
 If you don't feel like doing either, just ask us and we'll sent it to you by e-mail.
 
-After doing that, grab the command line and move to you project folder.
+To test if your ready to go, open the DemoJasmin folder and open SpecRunner.html in your favorite browser.
+A friendly page should open up, showing all tests passing. Yep, it's that easy. It's just Javascript!
 
-All you need is the following:
+The next steps will allow you to run the code coverage tool.
+Firstly, if you haven't done this already, install [Node.js](https://nodejs.org/en/) by going to their website and downloading their installer.
 
 
-###### Jasmin global install
+After doing that, grab the command line and move to you __project folder__.
+Just to be sure, run
 ```
-$ npm install -g jasmine
+$ node -v
 ```
+
+If all went well, the version of Node.js you just installed should be printed.
+Next, let's get karma to run!
+
+
 ###### Karma CLI global install
 ```
 $ npm install -g karma-cli
@@ -59,8 +67,16 @@ $ npm install -g karma-cli
 
 If you are using a Mac or Linux machine, don't forget __sudo__
 
-To test if your ready to go, open the DemoJasmin folder and open SpecRunner.html in your favorite browser.
-A friendly page should open up, showing all tests passing.
+Next, to get everything set up for the code covering tool, run the following commands:
+
+###### Locally installing jasmine-core, karma-jasmine, phantom-js and karma-coverage
+```
+$ npm install jasmine-core --save-dev
+$ npm install karma-jasmine --save-dev
+$ npm install phantomjs karma-phantomjs-launcher --save-dev
+$ npm install karma karma-coverage --save-dev
+```
+Ok, we're ready to go!
 
 ## How it works
 
@@ -70,7 +86,7 @@ The specified tests are run by opening SpecRunner.html in any browser.
 This HTML file manages all dependencies and necessary JS scripts.
 
 If you prefer the command line, this can also be done, by running the `jasmine` comand.
-However, you have to user some node.js to manage dependencies from the `src` files.
+However, you have to use some node.js to manage dependencies from the `src` files.
 
 ### Code coverage
 
