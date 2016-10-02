@@ -78,7 +78,7 @@ $ npm install karma karma-coverage --save-dev
 ```
 
 We recomend doint this because this way you know what your installing.
-Howerver, if you want a shortcut, we prepared a package.json file with the dependencies you need. Just run
+However, if you want a shortcut, we prepared a package.json file with the dependencies you need. Just run
 
 ```
 $ npm install
