@@ -76,6 +76,14 @@ $ npm install karma-jasmine --save-dev
 $ npm install phantomjs karma-phantomjs-launcher --save-dev
 $ npm install karma karma-coverage --save-dev
 ```
+
+We recomend doint this because this way you know what your installing.
+Howerver, if you want a shortcut, we prepared a package.json file with the dependencies you need. Just run
+
+```
+$ npm install
+```
+
 Ok, we're ready to go!
 
 ## How it works
