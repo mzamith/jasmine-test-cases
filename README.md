@@ -41,7 +41,7 @@ root
 ## Getting Set up
 
 You can clone this git project, or download the zip file.
-If you don't feel like doing wither, just ask us and we'll sent it to you by e-mail.
+If you don't feel like doing either, just ask us and we'll sent it to you by e-mail.
 
 After doing that, grab the command line and move to you project folder.
 
@@ -57,7 +57,7 @@ $ npm install -g jasmine
 $ npm install -g karma-cli
 ```
 
-If you are using a Mac or Linux machine, don't forget *sudo*
+If you are using a Mac or Linux machine, don't forget __sudo__
 
 To test if your ready to go, open the DemoJasmin folder and open SpecRunner.html in your favorite browser.
 A friendly page should open up, showing all tests passing.
@@ -74,7 +74,7 @@ However, you have to user some node.js to manage dependencies from the `src` fil
 
 ### Code coverage
 
-For code `coverage` directory, we will be using [Karma](https://karma-runner.github.io/1.0/index.html).
+For code coverage, we will be using [Karma](https://karma-runner.github.io/1.0/index.html).
 In this example, Karma will fire up our code in a PhantomJS browser and generate the necessary files for examination.
 
 To test it out, move to JasmineDemo directory and type the following in the comand line:
@@ -89,7 +89,7 @@ Read more about it [here](https://github.com/karma-runner/karma-coverage)
 
 ### Jasmine-JQuery
 
-Jasmine-jquery is a way to include Layout Testing into Jamine Testing through a seires of custom matchers.
+Jasmine-jquery is a way to include Layout Testing into Jamine Testing through a sieres of custom matchers.
 
 Read more [here](https://github.com/velesin/jasmine-jquery)
 
