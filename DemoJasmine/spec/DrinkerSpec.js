@@ -18,12 +18,15 @@ describe("Coffee", function () {
     expect(coffee.status).toEqual("full");
   });
 
-  it("should be happy from the start", function () {
-    coffee = new Coffee();
+  it("Person should be happy from the start", function () {
+    person = new Person();
     expect(person.isHappy).toBeTruthy();
   });
-
-
+/*
+------------------------------------------------------------------
+TEST CASE 1
+------------------------------------------------------------------
+*/
   describe("Drinking", function () {
 
     coffee = new Coffee();
@@ -35,12 +38,11 @@ describe("Coffee", function () {
       }).toThrowError("Null Pointer");
     });
 
-    it("should drink and be sad after", function () {
+    it("should be sad after drinking", function () {
       person.drink(coffee);
 
       //Demonstrating the use of a Custom Matcher;
       expect(person).not.toBeHappy();
-      expect(coffee.status).toEqual("empty");
       expect(person.lastDrink).toBeDefined();
     });
 
@@ -50,6 +52,11 @@ describe("Coffee", function () {
     });
   });
 
+/*
+------------------------------------------------------------------
+TEST CASE 2
+------------------------------------------------------------------
+*/
 
   //demonstrates use of expected exceptions
   describe("Refilling", function () {
@@ -57,14 +64,14 @@ describe("Coffee", function () {
     personToRefill = new Person();
     coffeeToRefill = new Coffee();
 
-    it("should not happen if coffe is already full", function () {
+    it("should not be allowed if coffe is already full", function () {
 
       expect(function () {
         personToRefill.refill(coffeeToRefill);
       }).toThrowError("Coffee is already full");
     });
 
-    it("should not happen if no coffee is passed!", function () {
+    it("should not be allowed if no coffee is passed!", function () {
 
       expect(function () {
         personToRefill.refill();
@@ -72,15 +79,27 @@ describe("Coffee", function () {
     });
 
     it("should make the person happy!", function () {
-      
+
       personToRefill.drink(coffeeToRefill);
+
       personToRefill.refill(coffeeToRefill);
       expect(personToRefill).toBeHappy()
-      expect(coffeeToRefill.status).toEqual("full");
+      
 
     });
-    
+
+    it("should make the coffee full", function () {
+
+      expect(coffeeToRefill.status).toEqual("full");
+    });
+
   });
+
+/*
+------------------------------------------------------------------
+TEST CASE 3
+------------------------------------------------------------------
+*/
 
   describe("Spilling", function () {
 
@@ -93,12 +112,22 @@ describe("Coffee", function () {
       }).toThrowError("Null Pointer");
     });
 
-    it("should empy coffe", function () {
+    it("should empty coffe", function () {
       personToSpill.spill(coffee);
       expect(coffee.status).not.toEqual("full");
     });
+
+    it("should make person sad", function () {
+      
+      expect(personToSpill).not.toBeHappy();
+    });
   });
 
+/*
+------------------------------------------------------------------
+TEST CASE 4
+------------------------------------------------------------------
+*/
 
   describe("Time", function () {
 
@@ -132,7 +161,7 @@ describe("Coffee", function () {
     it("should need coffee after some hours", function () {
 
       personToDrink.drink(coffeeToDrink);
-      jasmine.clock().tick( 4 * 60 * 60 * 1000)
+      jasmine.clock().tick(4 * 60 * 60 * 1000)
       needsCoffee = personToDrink.needsCoffee();
       expect(needsCoffee).toBeTruthy();
     });

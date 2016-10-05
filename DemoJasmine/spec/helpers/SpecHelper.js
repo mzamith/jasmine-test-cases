@@ -1,5 +1,5 @@
 var customMatchers = {
-   toBeHappy: function(util, customEqualityTesters) {
+   toBeHappy: function() {
     return {
        compare: function(actual, expected) {
           
