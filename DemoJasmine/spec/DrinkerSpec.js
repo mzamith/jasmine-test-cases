@@ -47,7 +47,6 @@ TEST CASE 1
     });
 
     it("should have emptied the coffee", function () {
-      // demonstrates use of 'not' with a custom matcher
       expect(coffee.status).toEqual("empty");
     });
   });
