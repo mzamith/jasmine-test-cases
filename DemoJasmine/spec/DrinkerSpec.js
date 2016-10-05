@@ -29,25 +29,25 @@ TEST CASE 1
 */
   describe("Drinking", function () {
 
-    coffee = new Coffee();
-    person = new Person();
+    coffeeToDrink = new Coffee();
+    personToDrink = new Person();
 
     it("should throw exception if no coffee is passed", function () {
       expect(function () {
-        person.drink();
+        personToDrink.drink();
       }).toThrowError("Null Pointer");
     });
 
     it("should be sad after drinking", function () {
-      person.drink(coffee);
+      personToDrink.drink(coffeeToDrink);
 
       //Demonstrating the use of a Custom Matcher;
-      expect(person).not.toBeHappy();
-      expect(person.lastDrink).toBeDefined();
+      expect(personToDrink).not.toBeHappy();
+      expect(personToDrink.lastDrink).toBeDefined();
     });
 
     it("should have emptied the coffee", function () {
-      expect(coffee.status).toEqual("empty");
+      expect(coffeeToDrink.status).toEqual("empty");
     });
   });
 
