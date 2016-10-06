@@ -84,7 +84,6 @@ TEST CASE 2
       personToRefill.refill(coffeeToRefill);
       expect(personToRefill).toBeHappy()
       
-
     });
 
     it("should make the coffee full", function () {
@@ -135,7 +134,7 @@ TEST CASE 4
       personToDrink = new Person();
 
       currentDate = new Date();
-      jasmine.clock().install()
+      jasmine.clock().install();
       jasmine.clock().mockDate(currentDate);
 
     });
