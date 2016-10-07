@@ -9,6 +9,7 @@ function Movie(name) {
 
 /**
   * @desc change the name of the Movie
+  * @param name - name to give the movie
 */
 Movie.prototype.setName = function (name) {
 	this.name = name;
